@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kash Yechuri</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Kash Yechuri</h1>
+            <p class="bio">Building go-to-market at <a href="https://galileo.ai" target="_blank">Galileo</a>, where we're helping teams evaluate and improve their GenAI applications. Based in San Francisco.</p>
+            
+            <nav class="social-links">
+                <a href="https://twitter.com/kashyechuri" target="_blank">Twitter</a>
+                <a href="https://linkedin.com/in/kashyapyechuri" target="_blank">LinkedIn</a>
+                <a href="mailto:kashyap.y@email.com">Email</a>
+            </nav>
+        </header>
+
+        <section class="content-sections">
+            <div class="section-header">
+                <a href="#" class="section-toggle reading-toggle">
+                    <span class="arrow">›</span>
+                    Reading
+                </a>
+            </div>
+            
+            <div class="section-content reading-list" style="display: none;">
+                <ul>
+                    <li>
+                        <a href="https://docs.google.com/document/d/1QFR3scxuGSY848qA7JDYEHI2uVB7f5nzIj_jIH7ihZQ/edit?tab=t.0" target="_blank">Startup Principles</a>
+                        <span class="author">by Abhay Venkatesh</span>
+                    </li>
+                    <li>
+                        <a href="https://justinmares.substack.com/p/the-great-american-poisoning" target="_blank">The Great American Poisoning</a>
+                        <span class="author">by Justin Mares</span>
+                    </li>
+                    <li>
+                        <a href="https://www.shaanpuri.com/essays/triangle-of-talent" target="_blank">Triangle of Talent</a>
+                        <span class="author">by Shaan Puri</span>
+                    </li>
+                    <li>
+                        <a href="https://www.shaanpuri.com/hof/mrbeast-memo" target="_blank">Leaked Memo</a>
+                        <span class="author">by Mr. Beast</span>
+                    </li>
+                    <li>
+                        <a href="https://sigilwen.ca/ego.html" target="_blank">Ego</a>
+                        <span class="author">by Sigil Wen</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll('.section-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionContent = this.parentElement.nextElementSibling;
+                sectionContent.style.display = sectionContent.style.display === 'none' ? 'block' : 'none';
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,8 @@
+your-blog/
+├── index.html
+├── styles.css
+├── scripts.js
+├── posts/
+│   └── sample-post.md
+└── lib/
+    └── marked.min.js 
