@@ -11,59 +11,72 @@
     <main>
         <header>
             <h1>Kash Yechuri</h1>
-            <p class="bio">Building go-to-market at <a href="https://galileo.ai" target="_blank">Galileo</a>, where we're helping teams evaluate and improve their GenAI applications. Based in San Francisco.</p>
+            <p class="tagline">Building go-to-market strategies and exploring the intersection of technology, creativity, and health.</p>
+        </header>
+
+        <section class="currently">
+            <h2>Currently</h2>
             
+            <h3>Reading</h3>
+            <ul>
+                <li>
+                    <a href="https://docs.google.com/document/d/1QFR3scxuGSY848qA7JDYEHI2uVB7f5nzIj_jIH7ihZQ/edit?tab=t.0" target="_blank">Startup Principles</a>
+                    <span class="author">by Abhay Venkatesh</span>
+                </li>
+                <li>
+                    <a href="https://mikekarnj.com/posts/rate-of-learning" target="_blank">Rate of Learning</a>
+                    <span class="author">by Michael Karnjanaprakorn</span>
+                </li>
+            </ul>
+
+            <h3>Learning</h3>
+            <ul>
+                <li>Building effective go-to-market strategies for AI products</li>
+                <li>Exploring the intersection of health optimization and technology</li>
+            </ul>
+
+            <h3>Interested in</h3>
+            <ul>
+                <li>AI/ML applications in business</li>
+                <li>Health optimization</li>
+                <li>Product-led growth</li>
+            </ul>
+        </section>
+
+        <section class="previously">
+            <h2>Previously</h2>
+            <ul>
+                <li>
+                    <strong>Galileo</strong>
+                    <span class="description">GenAI evaluation and observability stack</span>
+                </li>
+                <li>
+                    <strong>Algolia</strong>
+                    <span class="description">Search & discovery API</span>
+                </li>
+            </ul>
+        </section>
+
+        <section class="recommendations">
+            <h2>Recommendations</h2>
+            
+            <h3><a href="/books.html">Books & Essays →</a></h3>
+            <h3><a href="/podcasts.html">Podcasts →</a></h3>
+            <h3><a href="/sf-spots.html">San Francisco Spots →</a></h3>
+        </section>
+
+        <section class="writing">
+            <h2>Writing</h2>
+            <p>Coming soon.</p>
+        </section>
+
+        <footer>
             <nav class="social-links">
                 <a href="https://twitter.com/kashyechuri" target="_blank">Twitter</a>
                 <a href="https://linkedin.com/in/kashyapyechuri" target="_blank">LinkedIn</a>
                 <a href="mailto:kashyap.y@email.com">Email</a>
             </nav>
-        </header>
-
-        <section class="content-sections">
-            <div class="section-header">
-                <a href="#" class="section-toggle reading-toggle">
-                    <span class="arrow">›</span>
-                    Reading
-                </a>
-            </div>
-            
-            <div class="section-content reading-list" style="display: none;">
-                <ul>
-                    <li>
-                        <a href="https://docs.google.com/document/d/1QFR3scxuGSY848qA7JDYEHI2uVB7f5nzIj_jIH7ihZQ/edit?tab=t.0" target="_blank">Startup Principles</a>
-                        <span class="author">by Abhay Venkatesh</span>
-                    </li>
-                    <li>
-                        <a href="https://justinmares.substack.com/p/the-great-american-poisoning" target="_blank">The Great American Poisoning</a>
-                        <span class="author">by Justin Mares</span>
-                    </li>
-                    <li>
-                        <a href="https://www.shaanpuri.com/essays/triangle-of-talent" target="_blank">Triangle of Talent</a>
-                        <span class="author">by Shaan Puri</span>
-                    </li>
-                    <li>
-                        <a href="https://www.shaanpuri.com/hof/mrbeast-memo" target="_blank">Leaked Memo</a>
-                        <span class="author">by Mr. Beast</span>
-                    </li>
-                    <li>
-                        <a href="https://mikekarnj.com/posts/rate-of-learning" target="_blank">Rate of Learning</a>
-                        <span class="author">by Michael Karnjanaprakorn</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        </footer>
     </main>
-
-    <script>
-        document.querySelectorAll('.section-toggle').forEach(toggle => {
-            toggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                const sectionContent = this.parentElement.nextElementSibling;
-                sectionContent.style.display = sectionContent.style.display === 'none' ? 'block' : 'none';
-                this.classList.toggle('active');
-            });
-        });
-    </script>
 </body>
 </html> 
