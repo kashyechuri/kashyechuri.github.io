@@ -1,9 +1,8 @@
 /* Base styles */
 :root {
-    --text-color: #333;
-    --link-color: #0066cc;
-    --background-color: #ffffff;
-    --border-color: #eaeaea;
+    --text-color: #fff;
+    --background-color: #000;
+    --border-color: #333;
     --spacing-unit: 1.5rem;
 }
 
@@ -36,6 +35,7 @@ h1 {
 h2 {
     font-size: 1.5rem;
     margin: 2.5rem 0 1rem;
+    color: #888;
 }
 
 h3 {
@@ -49,12 +49,16 @@ p {
 
 /* Links */
 a {
-    color: var(--link-color);
+    color: var(--text-color);
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    opacity: 0.8;
+}
+
+a:visited {
+    color: var(--text-color);
 }
 
 /* Header */
@@ -64,7 +68,7 @@ header {
 
 .tagline {
     font-size: 1.2rem;
-    color: #555;
+    color: #888;
     margin: 1rem 0 2rem;
 }
 
