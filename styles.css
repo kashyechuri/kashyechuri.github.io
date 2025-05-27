@@ -1,8 +1,8 @@
 /* Base styles */
 :root {
-    --text-color: #fff;
-    --background-color: #000;
-    --border-color: #333;
+    --text-color: #000;
+    --background-color: #f8f6f0;
+    --border-color: #ddd;
     --spacing-unit: 1.5rem;
 }
 
@@ -35,13 +35,13 @@ h1 {
 h2 {
     font-size: 1.5rem;
     margin: 2.5rem 0 1rem;
-    color: #888;
+    color: #666;
 }
 
 h3 {
     font-size: 1.1rem;
     margin: 1.5rem 0 0.75rem;
-    color: #888;
+    color: #666;
 }
 
 p {
@@ -62,6 +62,22 @@ a:visited {
     color: var(--text-color);
 }
 
+/* Cursor link in tagline - gray with black underline */
+.tagline a {
+    color: #666;
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-underline-offset: 3px;
+}
+
+/* Previous work links - black with black underline */
+.previously a {
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-underline-offset: 3px;
+}
+
 /* Header */
 header {
     margin-bottom: 3rem;
@@ -69,7 +85,7 @@ header {
 
 .tagline {
     font-size: 1.2rem;
-    color: #888;
+    color: #666;
     margin: 1rem 0 2rem;
 }
 
@@ -92,7 +108,7 @@ li {
 .author, .description {
     display: block;
     font-size: 0.9rem;
-    color: #666;
+    color: #888;
     margin-top: 0.2rem;
 }
 
