@@ -6,10 +6,7 @@ const marked = require('marked');
 const app = express();
 const PORT = 3000;
 
-// Serve iPod app first (more specific route)
-app.use('/ipod', express.static('./ipod-app'));
-
-// Serve static files for main site
+// Serve static files
 app.use(express.static('.'));
 
 // Handle markdown posts
