@@ -40,7 +40,7 @@ h2 {
 
 h3 {
     font-size: 1.1rem;
-    margin: 1.5rem 0 0.75rem;
+    margin: 1rem 0 0.5rem;
     color: #666;
 }
 
@@ -98,7 +98,7 @@ header {
 
 /* Sections */
 section {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 /* Lists */
@@ -135,8 +135,8 @@ li {
 
 /* Footer */
 footer {
-    margin-top: 4rem;
-    padding-top: 2rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
     border-top: 1px solid var(--border-color);
 }
 
@@ -166,5 +166,23 @@ footer {
 
     .tagline {
         font-size: 1.1rem;
+        margin: 1rem 0 1rem;
+    }
+
+    header {
+        margin-bottom: 1.5rem;
+    }
+
+    section {
+        margin-bottom: 1.5rem;
+    }
+
+    h3 {
+        margin: 0.75rem 0 0.5rem;
+    }
+
+    footer {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
     }
 } 
