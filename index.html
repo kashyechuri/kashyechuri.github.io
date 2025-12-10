@@ -41,7 +41,7 @@
         <section class="recommendations">
             <h3><em>recommendations</em></h3>
             
-            <h3><a href="/favorite-content.html">favorite content</a></h3>
+            <h3><a href="/favorite-content.html">My favorite content</a></h3>
         </section>
 
         <footer>
@@ -77,12 +77,23 @@
         setInterval(updateTime, 60000);
 
         async function updateVisitorCount() {
+            const countElement = document.getElementById('visitor-count');
+            if (!countElement) return;
+            
             try {
                 const response = await fetch('https://kashy.goatcounter.com/counter/TOTAL.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
                 const data = await response.json();
-                document.getElementById('visitor-count').textContent = `You are visitor #${data.count}`;
+                if (data && typeof data.count === 'number') {
+                    countElement.textContent = `You are visitor #${data.count}`;
+                } else {
+                    throw new Error('Invalid response format');
+                }
             } catch (e) {
-                // Silently fail - counter is non-critical
+                // Hide the element if we can't fetch the count
+                countElement.style.display = 'none';
             }
         }
         updateVisitorCount();
