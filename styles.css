@@ -96,12 +96,6 @@ header {
     margin: -1rem 0 0.5rem;
 }
 
-#visitor-count {
-    font-size: 0.85rem;
-    color: #aaa;
-    margin: 0;
-}
-
 /* Sections */
 section {
     margin-bottom: 3rem;

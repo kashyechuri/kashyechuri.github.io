@@ -14,7 +14,6 @@
             <h1>Kash Yechuri</h1>
             <p class="tagline"><em>building gtm at <a href="https://cursor.com" target="_blank">Cursor</a>.</em></p>
             <p id="ambient-time"></p>
-            <p id="visitor-count"></p>
         </header>
 
         <section class="currently">
@@ -75,32 +74,7 @@
 
         // Update every minute
         setInterval(updateTime, 60000);
-
-        async function updateVisitorCount() {
-            const countElement = document.getElementById('visitor-count');
-            if (!countElement) return;
-            
-            try {
-                const response = await fetch('https://kashy.goatcounter.com/counter/TOTAL.json');
-                if (!response.ok) {
-                    throw new Error(`HTTP ${response.status}`);
-                }
-                const data = await response.json();
-                if (data && typeof data.count === 'number') {
-                    countElement.textContent = `You are visitor #${data.count}`;
-                } else {
-                    throw new Error('Invalid response format');
-                }
-            } catch (e) {
-                // Hide the element if we can't fetch the count
-                countElement.style.display = 'none';
-            }
-        }
-        updateVisitorCount();
     </script>
-
-    <script data-goatcounter="https://kashy.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html> 
