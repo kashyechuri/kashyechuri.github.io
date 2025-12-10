@@ -12,7 +12,9 @@
     <main>
         <header>
             <h1>Kash Yechuri</h1>
-            <p class="tagline"><em>based in San Francisco. building gtm at <a href="https://cursor.com" target="_blank">Cursor</a>.</em></p>
+            <p class="tagline"><em>building gtm at <a href="https://cursor.com" target="_blank">Cursor</a>.</em></p>
+            <p id="ambient-time"></p>
+            <p id="visitor-count"></p>
         </header>
 
         <section class="currently">
@@ -51,6 +53,43 @@
         </footer>
     </main>
 
+    <script>
+        function updateTime() {
+            const timeElement = document.getElementById('ambient-time');
+            if (!timeElement) return;
+
+            const now = new Date();
+            const formatter = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'America/Los_Angeles',
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true
+            });
+
+            const timeString = formatter.format(now);
+            timeElement.textContent = `It's ${timeString.toLowerCase()} in San Francisco.`;
+        }
+
+        // Update immediately on load
+        updateTime();
+
+        // Update every minute
+        setInterval(updateTime, 60000);
+
+        async function updateVisitorCount() {
+            try {
+                const response = await fetch('https://kashy.goatcounter.com/counter/TOTAL.json');
+                const data = await response.json();
+                document.getElementById('visitor-count').textContent = `You are visitor #${data.count}`;
+            } catch (e) {
+                // Silently fail - counter is non-critical
+            }
+        }
+        updateVisitorCount();
+    </script>
+
+    <script data-goatcounter="https://kashy.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html> 
